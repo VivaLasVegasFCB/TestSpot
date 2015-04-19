@@ -1,0 +1,52 @@
+<ion-view view-title="New Spot">
+  <ion-content ng-controller="createNewSpotCtrl">
+  	<div>
+  	 <div class="list">
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Category
+        </div>
+        <select ng-model="newSpot.category" ng-options="categorys as category.name for category in categorys">
+        </select>
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Sport
+        </div>
+        <select ng-model="newSpot.sport" ng-options="sport as sport.name for sport in sports">
+        </select>        
+      </label>
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Level
+        </div>
+        <select ng-model="newSpot.difficulty" ng-options="difficulty as difficulty.name for difficulty in difficultys">
+        </select>        
+      </label>
+
+      </div>
+      <label class="item item-input">
+        <div class="input-label">
+          #tags
+        </div>
+        <textarea placeholder="example: kingrail ledge beach "></textarea>
+      </label>
+      <label class="item item-input">
+        <div class="input-label">
+          Comments
+        </div>
+        <textarea placeholder="Comments"></textarea>
+      </label>
+    
+    </div>
+
+  <div class="button-bar">
+      <a class="button icon ion-trash-a" ng-click="takePicture()"></a>
+      <a class="button icon ion-checkmark-round" ng-click="go('app/createNewSpot')"></a>
+
+  </div>    
+</ion-content>
+
+</ion-view>

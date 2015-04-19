@@ -1,0 +1,15 @@
+<ion-view view-title="Camera">
+  <ion-content ng-controller="cameraViewCtrl">
+
+    <img ng-show="imgURI !== undefined" ng-src="{{imgURI}}">
+    <img ng-show="imgURI === undefined" ng-src="http://placehold.it/">
+  
+  	<div class="button-bar">
+  		<a class="button icon ion-trash-a" ng-click="takePicture()"></a>
+  		<a class="button icon ion-checkmark-round" ng-click="go('app/createNewSpot')"></a>
+
+	</div>    
+    
+</ion-content>
+
+</ion-view>
